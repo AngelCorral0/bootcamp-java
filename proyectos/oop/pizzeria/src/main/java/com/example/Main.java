@@ -28,6 +28,7 @@ public class Main {
     }
 
     private static Pedido getPedido1(){
+        @SuppressWarnings("deprecation")
         Pedido pedido = new Pedido(1, new Date(2024, 5, 21));
         pedido.addPizza(getPizza1());
         pedido.addPizza(getPizza2());
@@ -53,16 +54,16 @@ public class Main {
         Pedido pedido2 = getPedido2();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Options : ");
-        System.out.println("    0. Exit");
-        System.out.println("    1. See ingredients");
-        System.out.println("    2. Create order 1");
+        System.out.println("Opciones : ");
+        System.out.println("    0. Salir");
+        System.out.println("    1. Ver ingredientes");
+        System.out.println("    2. Crear orden 1");
         System.out.println("        Pizza 1: " + getPizza1().getUsedIngredientsStr(ingredientsList));
         System.out.println("        Pizza 2: " + getPizza2().getUsedIngredientsStr(ingredientsList));
-        System.out.println("    3. Create order 2");
+        System.out.println("    3. Crear orden 2");
         System.out.println("        Pizza 2: " + getPizza2().getUsedIngredientsStr(ingredientsList));
         System.out.println("        Pizza 2: " + getPizza2().getUsedIngredientsStr(ingredientsList));
-        System.out.println("    4. Add ingredients");
+        System.out.println("    4. Añadir ingredientes");
         System.out.println("        Jamón: 1");
         System.out.println("        Tomate: 1");
         System.out.println("        Queso: 1");
